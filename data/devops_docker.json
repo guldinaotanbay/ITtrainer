@@ -1,0 +1,181 @@
+[
+{
+"question":"Что такое Docker?",
+"answer":"Docker — это платформа для упаковки, доставки и запуска приложений в контейнерах",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое контейнер?",
+"answer":"Контейнер — это изолированная среда, в которой приложение работает вместе со своими зависимостями",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое образ Docker?",
+"answer":"Образ Docker — это шаблон, на основе которого создаются контейнеры",
+"topic":"Docker"
+},
+
+{
+"question":"Чем контейнер отличается от образа?",
+"answer":"Образ — это статический шаблон, а контейнер — запущенный экземпляр образа",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое Dockerfile?",
+"answer":"Dockerfile — это файл с инструкциями для сборки Docker-образа",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое Docker Hub?",
+"answer":"Docker Hub — это реестр для хранения и распространения Docker-образов",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое registry?",
+"answer":"Registry — это хранилище контейнерных образов для публикации и загрузки",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое docker build?",
+"answer":"docker build — это команда для создания Docker-образа из Dockerfile",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое docker run?",
+"answer":"docker run создаёт и запускает контейнер из образа",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое docker ps?",
+"answer":"docker ps показывает список запущенных контейнеров",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое docker stop?",
+"answer":"docker stop останавливает работающий контейнер",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое docker start?",
+"answer":"docker start запускает ранее остановленный контейнер",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое docker exec?",
+"answer":"docker exec выполняет команду внутри работающего контейнера",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое docker logs?",
+"answer":"docker logs выводит журнал работы контейнера",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое Docker daemon?",
+"answer":"Docker daemon — это фоновый процесс, управляющий контейнерами и образами",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое Docker CLI?",
+"answer":"Docker CLI — это интерфейс командной строки для управления Docker",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое layer в Docker?",
+"answer":"Layer — это слой Docker-образа, содержащий изменения файловой системы",
+"topic":"Docker"
+},
+
+{
+"question":"Зачем нужны слои образа?",
+"answer":"Слои позволяют переиспользовать части образа и ускоряют сборку",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое volume?",
+"answer":"Volume — это механизм постоянного хранения данных вне контейнера",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое bind mount?",
+"answer":"Bind mount связывает папку хоста с папкой внутри контейнера",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое network в Docker?",
+"answer":"Network — это механизм связи контейнеров между собой и внешним миром",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое Docker Compose?",
+"answer":"Docker Compose — это инструмент для запуска многоконтейнерных приложений",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое docker-compose.yml?",
+"answer":"docker-compose.yml — это файл конфигурации Docker Compose",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое порт-маппинг?",
+"answer":"Порт-маппинг — это проброс порта контейнера на порт хоста",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое Docker image tag?",
+"answer":"Tag — это метка версии Docker-образа, например latest или v1.0",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое multistage build?",
+"answer":"Multistage build — это сборка образа в несколько этапов для уменьшения размера финального образа",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое .dockerignore?",
+"answer":".dockerignore — это файл для исключения ненужных файлов из контекста сборки",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое изоляция контейнеров?",
+"answer":"Изоляция контейнеров разделяет процессы, файловую систему и сетевые ресурсы",
+"topic":"Docker"
+},
+
+{
+"question":"Что такое контейнеризация?",
+"answer":"Контейнеризация — это упаковка приложения и зависимостей в переносимый контейнер",
+"topic":"Docker"
+},
+
+{
+"question":"Зачем Docker нужен DevOps-инженеру?",
+"answer":"Docker помогает делать окружения одинаковыми, ускоряет тестирование, доставку и деплой",
+"topic":"Docker"
+}
+]

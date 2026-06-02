@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT-TRAINER | Настройки</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/settings.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="header" role="banner">
+    <div class="container nav">
+
+      <a href="/" class="logo" aria-label="Главная страница IT-Trainer">
+        <span class="logo-it">IT</span><span>-TRAINER</span>
+      </a>
+
+      <nav class="menu" aria-label="Основное меню">
+        <a href="/settings/backend">Backend</a>
+        <a href="/settings/frontend">Frontend</a>
+        <a href="/settings/devops">DevOps</a>
+        <a href="/settings/general">General</a>
+      </nav>
+
+      {% if session.get("user_id") %}
+      <a href="/profile" class="profile-btn" aria-label="Профиль пользователя">
+        <div class="mini-avatar" aria-hidden="true">{{ session.get("username")[0].upper() }}</div>
+      </a>
+      {% else %}
+      <a href="/login" class="login-btn" aria-label="Войти">Войти</a>
+      {% endif %}
+
+    </div>
+  </header>
+
+  <main class="settings-page" role="main" aria-label="Настройки тренировки">
+    <section class="settings-section">
+
+      <div class="container">
+
+        <header class="settings-header">
+          <h1>Настройте собеседование</h1>
+          <p>Выберите параметры для проверки знаний</p>
+        </header>
+
+        <div class="settings-box">
+
+          <section class="settings-group" aria-labelledby="directionTitle">
+            <h3 id="directionTitle">Направление</h3>
+            <div class="buttons-grid" role="group" aria-label="Выбор направления">
+
+              <button
+                class="option-btn direction-btn {% if direction_key == 'backend' %}active{% endif %}"
+                data-direction="backend"
+                type="button"
+                aria-pressed="{% if direction_key == 'backend' %}true{% else %}false{% endif %}"
+              >
+                Backend
+              </button>
+
+              <button
+                class="option-btn direction-btn {% if direction_key == 'frontend' %}active{% endif %}"
+                data-direction="frontend"
+                type="button"
+                aria-pressed="{% if direction_key == 'frontend' %}true{% else %}false{% endif %}"
+              >
+                Frontend
+              </button>
+
+              <button
+                class="option-btn direction-btn {% if direction_key == 'devops' %}active{% endif %}"
+                data-direction="devops"
+                type="button"
+                aria-pressed="{% if direction_key == 'devops' %}true{% else %}false{% endif %}"
+              >
+                DevOps
+              </button>
+
+              <button
+                class="option-btn direction-btn {% if direction_key == 'general' %}active{% endif %}"
+                data-direction="general"
+                type="button"
+                aria-pressed="{% if direction_key == 'general' %}true{% else %}false{% endif %}"
+              >
+                General
+              </button>
+
+            </div>
+          </section>
+
+          <section class="settings-group" aria-labelledby="levelTitle">
+            <h3 id="levelTitle">Уровень</h3>
+            <div class="buttons-grid level-grid" role="group" aria-label="Выбор уровня">
+
+              <button class="option-btn active" type="button" aria-pressed="true">Junior</button>
+
+              <button class="option-btn locked-btn" type="button" aria-disabled="true" disabled>Middle · Недоступно </button>
+
+              <button class="option-btn locked-btn" type="button" aria-disabled="true" disabled>Senior · Недоступно </button>
+
+            </div>
+            <p class="development-text" aria-live="polite">В настоящее время доступен только уровень Junior</p>
+          </section>
+
+          <section class="settings-group" aria-labelledby="topicsTitle">
+            <h3 id="topicsTitle">Темы</h3>
+            <div class="buttons-grid multi-select" role="group" aria-label="Выбор тем">
+
+              {% for topic in direction.topics %}
+              <button class="option-btn" type="button" aria-pressed="false">{{ topic }}</button>
+              {% endfor %}
+
+            </div>
+          </section>
+
+          <section class="settings-group" aria-labelledby="timerTitle">
+            <h3 id="timerTitle">Таймер</h3>
+            <div class="buttons-grid single-select" role="group" aria-label="Выбор времени тренировки">
+
+              <button class="option-btn timer-btn" data-timer="1" type="button" aria-pressed="false">1 минута</button>
+
+              <button class="option-btn timer-btn active" data-timer="3" type="button" aria-pressed="true">3 минуты</button>
+
+              <button class="option-btn timer-btn" data-timer="5" type="button" aria-pressed="false">5 минут</button>
+
+            </div>
+          </section>
+
+          <a href="/flashcards" class="start-training-btn disabled" id="startBtn" role="button" aria-disabled="true">Начать</a>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-content">
+      <p>© IT-Trainer 2026</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/setting.js') }}"></script>
+</body>
+
+</html>

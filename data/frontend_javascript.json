@@ -1,0 +1,181 @@
+[
+{
+"question":"Что такое JavaScript?",
+"answer":"JavaScript — это язык программирования для веб-разработки, поддерживающий объектно-ориентированный, императивный и функциональный стили",
+"topic":"JavaScript"
+},
+
+{
+"question":"Какие основные типы данных существуют в JavaScript?",
+"answer":"Number, String, Boolean, Object, null, undefined, Symbol и BigInt",
+"topic":"JavaScript"
+},
+
+{
+"question":"В чём разница между операторами == и ===?",
+"answer":"== сравнивает значения с приведением типов, а === сравнивает без приведения типов",
+"topic":"JavaScript"
+},
+
+{
+"question":"Какими способами можно объявить переменную?",
+"answer":"Через var, let и const, при этом let и const имеют блочную область видимости",
+"topic":"JavaScript"
+},
+
+{
+"question":"В чём разница между null и undefined?",
+"answer":"undefined означает отсутствие значения, а null задаётся вручную как пустое значение",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое стрелочные функции?",
+"answer":"Это сокращённая запись функций, не имеющая собственного this и arguments",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое замыкание closure?",
+"answer":"Функция, сохраняющая доступ к внешним переменным даже после завершения родительской функции",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое шаблонные строки template literals?",
+"answer":"Строки в обратных кавычках с поддержкой многострочности и вставки выражений через ${}",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое Set и Map?",
+"answer":"Map хранит пары ключ-значение, а Set хранит только уникальные значения",
+"topic":"JavaScript"
+},
+
+{
+"question":"Как проверить наличие свойства в объекте?",
+"answer":"Через hasOwnProperty() или оператор in",
+"topic":"JavaScript"
+},
+
+{
+"question":"Как обратиться к свойству объекта?",
+"answer":"Через точку obj.a или квадратные скобки obj['a']",
+"topic":"JavaScript"
+},
+
+{
+"question":"Какие основные методы работы с массивами существуют?",
+"answer":"forEach, map, filter и reduce",
+"topic":"JavaScript"
+},
+
+{
+"question":"Какими способами можно создать объект?",
+"answer":"Через литерал {}, class, функцию-конструктор или Object.create()",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое Promise?",
+"answer":"Объект для работы с асинхронным кодом, имеющий состояния pending, fulfilled и rejected",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое async await?",
+"answer":"Синтаксис для удобной работы с Promise, где await ожидает выполнение Promise",
+"topic":"JavaScript"
+},
+
+{
+"question":"Как проверить, является ли объект массивом?",
+"answer":"Через Array.isArray()",
+"topic":"JavaScript"
+},
+
+{
+"question":"Для чего нужен spread оператор?",
+"answer":"Для распаковки массивов и объектов при копировании или объединении данных",
+"topic":"JavaScript"
+},
+
+{
+"question":"Как избежать ссылочной зависимости при копировании объекта?",
+"answer":"Для плоских объектов используют spread оператор или Object.assign(), для вложенных — глубокое копирование",
+"topic":"JavaScript"
+},
+
+{
+"question":"Как изменить контекст функции?",
+"answer":"Через bind(), call() и apply()",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое тернарный оператор?",
+"answer":"Сокращённая запись условия if else в виде условие ? значение1 : значение2",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое деструктуризация?",
+"answer":"Синтаксис для распаковки массивов и объектов в отдельные переменные",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое DOM?",
+"answer":"Объектное представление HTML-документа в виде дерева элементов",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое Event Loop?",
+"answer":"Механизм обработки асинхронных задач и событий в JavaScript",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое прототипное наследование?",
+"answer":"Механизм наследования свойств и методов через prototype",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что делает Optional Chaining?",
+"answer":"Безопасно обращается к вложенным свойствам и возвращает undefined, если свойства нет",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое Shadow DOM?",
+"answer":"Механизм инкапсуляции структуры и стилей компонента",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое рекурсия?",
+"answer":"Подход, при котором функция вызывает саму себя для решения задачи",
+"topic":"JavaScript"
+},
+
+{
+"question":"В чём разница между Function Declaration и Function Expression?",
+"answer":"Function Declaration поднимается при hoisting, а Function Expression создаётся только во время выполнения",
+"topic":"JavaScript"
+},
+
+{
+"question":"Что такое конструкторы функций?",
+"answer":"Функции, используемые для создания объектов через new",
+"topic":"JavaScript"
+},
+
+{
+"question":"Как получить список ключей и значений объекта?",
+"answer":"Object.keys() возвращает ключи объекта, а Object.values() возвращает значения",
+"topic":"JavaScript"
+}
+]

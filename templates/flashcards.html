@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT-TRAINER | Flashcards</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/flashcards.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="Главная">
+        <span class="logo-it">IT</span><span>-TRAINER</span>
+      </a>
+
+      <nav class="menu" aria-label="Основное меню">
+        <a href="/settings/backend">Backend</a>
+        <a href="/settings/frontend">Frontend</a>
+        <a href="/settings/devops">DevOps</a>
+        <a href="/settings/general">General</a>
+      </nav>
+
+      {% if session.get("user_id") %}
+      <a href="/profile" class="profile-btn" aria-label="Профиль пользователя">
+        <div class="mini-avatar" aria-hidden="true">
+          {{ session.get("username")[0].upper() }}
+        </div>
+      </a>
+      {% else %}
+      <a href="/login" class="login-btn">Войти</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <main class="flashcards-section" role="main">
+    <div class="container flashcards-container">
+
+      <div class="top-panel">
+        <a href="/settings/backend" class="back-link" aria-label="Вернуться к настройкам">
+          ← Назад к настройкам
+        </a>
+        <div id="timer" class="timer" aria-live="polite" aria-atomic="true">3:00</div>
+      </div>
+
+      <section class="stats" aria-live="polite" aria-atomic="true">
+        <p>Просмотрено: <span id="viewed">0</span>/<span id="totalCards">0</span></p>
+        <p class="green">Знаю: <span id="knowCount">0</span></p>
+        <p class="orange">Повторить: <span id="repeatCount">0</span></p>
+        <p class="red">Не знаю: <span id="dontKnowCount">0</span></p>
+      </section>
+
+      <article id="flipCard" class="flip-card" role="region" aria-label="Флеш-карта">
+        <div id="flipInner" class="flip-inner">
+          <section class="card-face card-front">
+            <button class="favorite" aria-label="Добавить в избранное" type="button">☆</button>
+            <div id="questionTopic" class="card-topic"></div>
+            <div class="card-center">
+              <h2 id="questionTitle"></h2>
+              <p id="questionText"></p>
+            </div>
+          </section>
+
+          <section class="card-face card-back">
+            <div id="answerTopic" class="card-topic"></div>
+            <div class="card-center">
+              <h2>Ответ</h2>
+              <p id="answerText"></p>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <section id="answerBlock" class="answer-block hidden" role="group" aria-label="Оценка ответа">
+        <p>Как бы вы оценили свой ответ?</p>
+        <div class="answer-grid">
+          <button type="button" class="answer-btn red-btn" data-type="dontKnow">Не знаю</button>
+          <button type="button" class="answer-btn orange-btn" data-type="repeat">Нужно повторить</button>
+          <button type="button" class="answer-btn green-btn" data-type="know">Знаю</button>
+        </div>
+      </section>
+
+      <div id="selectedAnswer" class="selected-answer hidden" aria-live="polite"></div>
+
+      <nav class="bottom-panel" aria-label="Навигация по карточкам">
+        <button type="button" id="prevBtn" class="nav-btn disabled-btn" aria-disabled="true" aria-label="Предыдущая карточка">
+           Назад
+        </button>
+        <p id="currentCard" aria-live="polite" aria-atomic="true">0 из 0</p>
+        <button type="button" id="nextBtn" class="next-btn" aria-label="Следующая карточка">
+          Далее 
+        </button>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-content">
+      <p>© IT-Trainer 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const flashcardsData = {{ flashcards|tojson }};
+  </script>
+  <script src="{{ url_for('static', filename='js/flashcards.js') }}"></script>
+</body>
+
+</html>

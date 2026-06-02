@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT-TRAINER | Вход</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <main class="auth-section" role="main" aria-label="Страница входа">
+
+    <form method="POST" class="auth-box" autocomplete="username">
+
+      <h1>Вход</h1>
+      <p>Войдите в аккаунт</p>
+
+      <label for="username" class="visually-hidden">Имя пользователя</label>
+      <input id="username" type="text" name="username" placeholder="Имя пользователя" required autocomplete="username" />
+
+      <label for="password" class="visually-hidden">Пароль</label>
+      <input id="password" type="password" name="password" placeholder="Пароль" required autocomplete="current-password" />
+
+      <button type="submit" aria-label="Войти в аккаунт">Войти</button>
+
+      <p class="register-link">
+        <a href="/register">Нет аккаунта?</a>
+      </p>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>

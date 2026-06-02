@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  color: #111827;
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-it {
+  color: #2563eb;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  font-size: 15px;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #111827;
+  outline: none;
+}
+
+.login-btn {
+  background-color: #050816;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+  opacity: 0.9;
+  outline: none;
+}
+
+.settings-section {
+  padding: 70px 0 420px;
+  min-height: 1400px;
+}
+
+.settings-header {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.settings-header h1 {
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.settings-header p {
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.settings-box {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 26px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-group h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.option-btn {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 15px;
+  color: #111827;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.option-btn:hover,
+.option-btn:focus {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+  outline: none;
+}
+
+.option-btn.active {
+  background-color: #f3f4f6;
+  border-color: #111827;
+}
+
+.locked-btn {
+  pointer-events: none;
+  opacity: 0.5;
+  background-color: #f9fafb;
+}
+
+.development-text {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.start-training-btn {
+  height: 60px;
+  width: 100%;
+  margin-top: 12px;
+  background-color: #050816;
+  color: #fff;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  user-select: none;
+}
+
+.start-training-btn.disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #e5e7eb;
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  color: #999999;
+}
+
+.footer-content p {
+  font-size: 13px;
+  color: #999999;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .settings-section {
+    padding: 50px 0 320px;
+    min-height: 1200px;
+  }
+
+  .settings-header h1 {
+    font-size: 38px;
+  }
+
+  .settings-header p {
+    font-size: 16px;
+  }
+
+  .settings-box {
+    border-radius: 22px;
+    padding: 24px;
+  }
+
+  .buttons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .option-btn {
+    height: 54px;
+  }
+
+  .start-training-btn {
+    height: 56px;
+  }
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.mini-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #050816;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  user-select: none;
+}

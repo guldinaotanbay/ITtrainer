@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT-TRAINER</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="header" role="banner">
+    <div class="container nav">
+
+      <div class="logo" aria-label="Главная страница IT-Trainer">
+        <span class="logo-it">IT</span><span class="logo-trainer">-TRAINER</span>
+      </div>
+
+      <nav class="menu" aria-label="Основное меню">
+        <a href="/settings/backend">Backend</a>
+        <a href="/settings/frontend">Frontend</a>
+        <a href="/settings/devops">DevOps</a>
+        <a href="/settings/general">General</a>
+      </nav>
+
+      {% if session.get("user_id") %}
+      <a href="/profile" class="profile-mini" aria-label="Профиль пользователя">
+        <div class="mini-avatar" aria-hidden="true">{{ session.get("username")[0].upper() }}</div>
+      </a>
+      {% else %}
+      <a href="/login" class="login-btn" aria-label="Войти">Войти</a>
+      {% endif %}
+
+    </div>
+  </header>
+
+  <main role="main">
+
+    <section class="hero" aria-label="Главный баннер">
+      <div class="container hero-content">
+
+        <div class="hero-text">
+          <h1>
+            Подготовься к IT-собеседованию
+            <span>с уверенностью</span>
+          </h1>
+          <p>
+            Проходи интерактивные задания,<br />
+            оценивай свой уровень и <br />
+            совершенствуй навыки в удобном формате!
+          </p>
+
+          {% if session.get("user_id") %}
+          <a href="/settings/backend" class="start-btn" role="button" aria-label="Начать подготовку">Начать</a>
+          {% else %}
+          <a href="/login" class="start-btn" role="button" aria-label="Войти">Начать</a>
+          {% endif %}
+        </div>
+
+        <div class="hero-image">
+          <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="IT тренажер" />
+        </div>
+
+      </div>
+    </section>
+
+    <section class="steps" aria-labelledby="steps-title">
+      <div class="container">
+
+        <header class="section-title">
+          <h2 id="steps-title">Как это работает?</h2>
+          <p>Простой и понятный процесс обучения:</p>
+        </header>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">Ⅰ</div>
+            <h3>Выберите направление</h3>
+            <p>Изучайте теоретические вопросы по Backend, Frontend, DevOps и другим направлениям</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">Ⅱ</div>
+            <h3>Настройте собеседование</h3>
+            <p>Укажите уровень сложности, продолжительность собеседования и выберите интересующие темы</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">ⅠⅡ</div>
+            <h3>Повторяйте материал с помощью карточек</h3>
+            <p>Изучайте вопросы в формате флэш-карточек, оценивайте свой уровень подготовки и сохраняйте интересующие вопросы в избранное</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">Ⅵ</div>
+            <h3>Просматривайте результаты</h3>
+            <p>Просматривайте итоговый результат и изучайте пройденные вопросы</p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="audience" aria-labelledby="audience-title">
+      <div class="container">
+
+        <header class="section-title">
+          <h2 id="audience-title">Кому подойдёт IT-TRAINER?</h2>
+          <p>IT-TRAINER подходит всем, кто хочет проверить, закрепить и улучшить свои теоретические знания в сфере информационных технологий</p>
+        </header>
+
+        <div class="audience-grid">
+
+          <article class="audience-item">
+            <div class="circle" aria-hidden="true">🎓</div>
+            <h3>Студенты</h3>
+            <p>Изучайте теоретический материал, для эффективного запоминания и повторения учебного материала</p>
+          </article>
+
+          <article class="audience-item">
+            <div class="circle" aria-hidden="true">💼</div>
+            <h3>Специалисты</h3>
+            <p>Повторяйте ключевые темы, проверяйте уровень подготовки и поддерживайте актуальность своих знаний</p>
+          </article>
+
+          <article class="audience-item">
+            <div class="circle" aria-hidden="true">📚</div>
+            <h3>Самообучение</h3>
+            <p>Расширяйте знания в различных областях IT и закрепляй материал </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="advantages" aria-labelledby="advantages-title">
+      <div class="container">
+
+        <header class="section-title">
+          <h2 id="advantages-title">Почему выбирают IT-TRAINER?</h2>
+          <p>Удобная платформа для изучения, повторения и проверки теоретических знаний в области информационных технологий</p>
+        </header>
+
+        <div class="advantages-grid">
+          <div class="advantage">✓ Простой и минималистичный интерфейс</div>
+          <div class="advantage">✓ Эффективное запоминание материала</div>
+          <div class="advantage">✓ Интерактивное обучение</div>
+          <div class="advantage">✓ Ускоренное усвоение информации</div>
+          <div class="advantage">✓ Удобная навигация по платформе</div>
+          <div class="advantage">✓ Постоянное развитие платформы</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-content">
+      <div class="footer-text">© IT-Trainer 2026</div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

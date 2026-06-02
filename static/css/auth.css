@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f5f5;
+}
+
+.auth-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-box {
+  width: 420px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.auth-box p {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.auth-box input {
+  height: 56px;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 0 18px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.auth-box button {
+  height: 56px;
+  border: none;
+  border-radius: 14px;
+  background: #050816;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-box a {
+  margin-top: 20px;
+  text-align: center;
+  color: #2563eb;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.auth-box a:hover,
+.auth-box a:focus {
+  text-decoration: underline;
+  outline: none;
+}

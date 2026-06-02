@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT-TRAINER | Профиль</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="На главную">
+        <span class="logo-it">IT</span><span>-TRAINER</span>
+      </a>
+
+      <nav class="menu" aria-label="Меню настроек">
+        <a href="/settings/backend">Backend</a>
+        <a href="/settings/frontend">Frontend</a>
+        <a href="/settings/devops">DevOps</a>
+        <a href="/settings/general">General</a>
+      </nav>
+
+      <a href="/profile" class="profile-btn" aria-label="Профиль пользователя">
+        <div class="mini-avatar">{{ session.get("username")[0].upper() }}</div>
+      </a>
+    </div>
+  </header>
+
+  <main class="profile-section">
+    <div class="container profile-container">
+      <section class="profile-card" aria-label="Информация о пользователе">
+        <aside class="profile-left">
+          <div class="avatar" aria-hidden="true">{{ session.get("username")[0].upper() }}</div>
+          <div class="profile-info">
+            <h1>{{ session.get("username") }}</h1>
+            <p>Зарегистрирован: {{ session.get("created_at") }}</p>
+          </div>
+        </aside>
+
+        <a href="/logout" class="logout-btn" role="button" tabindex="0">Выйти</a>
+      </section>
+
+      <section class="stats-grid" aria-label="Статистика пользователя">
+        <article class="stat-card">
+          <h3>Прохождения</h3>
+          <div class="stat-value">{{ trainings_count }}</div>
+        </article>
+
+        <article class="stat-card">
+          <h3>Просмотренные вопросы</h3>
+          <div class="stat-value">{{ cards_count }}</div>
+        </article>
+
+        <article class="stat-card">
+          <h3>Правильные ответы</h3>
+          <div class="stat-value green-text">{{ correct_answers }}</div>
+        </article>
+      </section>
+
+      <section class="favorites-section" aria-label="Избранные вопросы">
+        <header class="section-top">
+          <h2>Избранные вопросы</h2>
+        </header>
+
+        <div id="favoritesContainer" class="favorites-list" role="list"></div>
+
+        <div id="emptyFavorites" class="empty-box hidden" role="alert" aria-live="polite">
+          <h3>Нет избранных вопросов</h3>
+          <p>Добавляйте карточки в избранное</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <aside id="favoriteModal" class="favorite-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalQuestion"
+    aria-describedby="modalAnswer" tabindex="-1">
+    <div class="favorite-modal-content">
+      <button id="closeModal" class="close-modal" aria-label="Закрыть окно">✕</button>
+      <h3 id="modalQuestion">Вопрос</h3>
+      <p id="modalAnswer">Ответ</p>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© IT-Trainer 2026</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+</body>
+
+</html>

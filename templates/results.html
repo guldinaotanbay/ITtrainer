@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT-TRAINER | Результаты</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="header" role="banner">
+    <div class="container nav">
+
+      <a href="/" class="logo" aria-label="Главная страница IT-Trainer">
+        <span class="logo-it">IT</span><span>-TRAINER</span>
+      </a>
+
+      <nav class="menu" aria-label="Основное меню">
+        <a href="/settings/backend">Backend</a>
+        <a href="/settings/frontend">Frontend</a>
+        <a href="/settings/devops">DevOps</a>
+        <a href="/settings/general">General</a>
+      </nav>
+
+      {% if session.get("user_id") %}
+      <a href="/profile" class="profile-btn" aria-label="Профиль пользователя">
+        <div class="mini-avatar" aria-hidden="true">{{ session.get("username")[0].upper() }}</div>
+      </a>
+      {% else %}
+      <a href="/login" class="login-btn" aria-label="Войти">Войти</a>
+      {% endif %}
+
+    </div>
+  </header>
+
+  <main class="results-section" role="main" aria-label="Результат собеседования">
+    <div class="container results-container">
+
+      <header class="results-header">
+        <h1>Результат собеседования</h1>
+      </header>
+
+      <section class="summary-grid" aria-label="Сводные показатели">
+        <article class="summary-card" aria-labelledby="knowledgeLevelLabel">
+          <h3 id="knowledgeLevelLabel">Уровень знаний</h3>
+          <div id="summaryValue" class="summary-value" aria-live="polite">0%</div>
+        </article>
+
+        <article class="summary-card" aria-labelledby="knowLabel">
+          <h3 id="knowLabel">Знаю</h3>
+          <div id="knowValue" class="summary-value green" aria-live="polite">0</div>
+        </article>
+
+        <article class="summary-card" aria-labelledby="repeatLabel">
+          <h3 id="repeatLabel">Повторить</h3>
+          <div id="repeatValue" class="summary-value orange" aria-live="polite">0</div>
+        </article>
+
+        <article class="summary-card" aria-labelledby="dontKnowLabel">
+          <h3 id="dontKnowLabel">Не знаю</h3>
+          <div id="dontKnowValue" class="summary-value red" aria-live="polite">0</div>
+        </article>
+      </section>
+
+      <section class="analysis-box" aria-label="Ваши результаты">
+        <h2>Ваши результаты</h2>
+        <p id="analysisText" aria-live="polite">Загрузка результатов...</p>
+      </section>
+
+      <section class="questions-box" aria-label="Список вопросов">
+        <h2>Список вопросов</h2>
+        <div id="questionsContainer"></div>
+      </section>
+
+      <section class="results-actions">
+        <a href="/" class="main-btn" role="button" aria-label="На главную">На главную</a>
+        <a href="/settings/backend" class="secondary-btn" role="button" aria-label="Повторить">Повторить</a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-content">
+      <p>© IT-Trainer 2026</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/results.js') }}"></script>
+
+</body>
+
+</html>

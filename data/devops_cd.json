@@ -1,0 +1,181 @@
+[
+{
+"question":"Что такое DevOps?",
+"answer":"DevOps — это подход, который объединяет разработку и эксплуатацию для ускорения выпуска и повышения качества ПО",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое CI?",
+"answer":"CI или Continuous Integration — это практика частого объединения изменений кода с автоматической сборкой и тестированием",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое CD?",
+"answer":"CD означает Continuous Delivery или Continuous Deployment и описывает автоматизацию доставки изменений",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое CI/CD pipeline?",
+"answer":"CI/CD pipeline — это последовательность автоматических шагов от коммита кода до сборки, тестов и деплоя",
+"topic":"DevOps"
+},
+
+{
+"question":"Зачем нужен pipeline as code?",
+"answer":"Pipeline as code позволяет хранить конфигурацию pipeline в системе контроля версий и делать процесс воспроизводимым",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое version control в CI/CD?",
+"answer":"Version control — это хранение кода и конфигураций в Git или другой системе контроля версий",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое build?",
+"answer":"Build — это процесс преобразования исходного кода в готовый артефакт",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое automated testing?",
+"answer":"Automated testing — это автоматический запуск тестов для раннего обнаружения ошибок",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое unit tests?",
+"answer":"Unit tests проверяют отдельные функции или модули изолированно от системы",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое integration tests?",
+"answer":"Integration tests проверяют совместную работу разных частей системы",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое deployment?",
+"answer":"Deployment — это процесс размещения приложения в целевой среде",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое release?",
+"answer":"Release — это выпуск версии продукта для пользователей",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое artifact?",
+"answer":"Artifact — это результат сборки, например контейнерный образ или исполняемый файл",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое rollback?",
+"answer":"Rollback — это откат к предыдущей стабильной версии после ошибки",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое idempotent deployment?",
+"answer":"Idempotent deployment — это развертывание, которое можно повторять без изменения результата",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое automation в DevOps?",
+"answer":"Automation — это замена ручных действий автоматическими процессами и скриптами",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое infrastructure as code?",
+"answer":"Infrastructure as code — это управление инфраструктурой через код и конфигурации",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое configuration management?",
+"answer":"Configuration management — это контроль настроек серверов и окружений",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое Jenkins?",
+"answer":"Jenkins — это инструмент автоматизации для сборки, тестирования и доставки приложений",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое GitLab CI?",
+"answer":"GitLab CI — это встроенная система непрерывной интеграции и доставки в GitLab",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое Travis CI?",
+"answer":"Travis CI — это сервис автоматического запуска сборок и тестов",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое secrets management?",
+"answer":"Secrets management — это безопасное хранение токенов, ключей и паролей",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое caching in CI/CD?",
+"answer":"Caching — это сохранение зависимостей и промежуточных данных для ускорения сборок",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое parallel execution?",
+"answer":"Parallel execution — это одновременное выполнение нескольких этапов pipeline",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое fail fast?",
+"answer":"Fail fast — это принцип остановки pipeline сразу после обнаружения ошибки",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое staging environment?",
+"answer":"Staging environment — это тестовая среда, максимально похожая на production",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое production environment?",
+"answer":"Production environment — это рабочая среда, доступная пользователям",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое мониторинг pipeline?",
+"answer":"Мониторинг pipeline — это наблюдение за стабильностью, временем выполнения и ошибками pipeline",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое DevOps lifecycle?",
+"answer":"DevOps lifecycle — это цикл планирования, разработки, тестирования, доставки и эксплуатации",
+"topic":"DevOps"
+},
+
+{
+"question":"Что такое continuous delivery?",
+"answer":"Continuous delivery — это подход, при котором каждое изменение готово к безопасному релизу после автоматических проверок",
+"topic":"DevOps"
+}
+]

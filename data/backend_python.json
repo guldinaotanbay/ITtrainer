@@ -1,0 +1,181 @@
+[
+{
+"question":"Что такое объект в Python?",
+"answer":"Объект — это абстракция Python для данных",
+"topic":"Python"
+},
+
+{
+"question":"Что такое идентичность объекта?",
+"answer":"Это уникальный идентификатор объекта",
+"topic":"Python"
+},
+
+{
+"question":"Что определяет тип объекта?",
+"answer":"Тип определяет операции и допустимые значения",
+"topic":"Python"
+},
+
+{
+"question":"Что такое изменяемый объект?",
+"answer":"Объект, значение которого можно изменить",
+"topic":"Python"
+},
+
+{
+"question":"Что такое неизменяемый объект?",
+"answer":"Объект, который нельзя изменить",
+"topic":"Python"
+},
+
+{
+"question":"Что такое контейнер?",
+"answer":"Объект, содержащий ссылки на другие объекты",
+"topic":"Python"
+},
+
+{
+"question":"Что такое сборка мусора?",
+"answer":"Автоматическое удаление недостижимых объектов",
+"topic":"Python"
+},
+
+{
+"question":"Что такое None?",
+"answer":"Специальное значение отсутствия значения",
+"topic":"Python"
+},
+
+{
+"question":"Что такое NotImplemented?",
+"answer":"Специальное значение для неподдерживаемых операций",
+"topic":"Python"
+},
+
+{
+"question":"Что такое Ellipsis?",
+"answer":"Специальный объект Python (...)",
+"topic":"Python"
+},
+
+{
+"question":"Что такое int?",
+"answer":"Тип целых чисел",
+"topic":"Python"
+},
+
+{
+"question":"Что такое bool?",
+"answer":"Логический тип True и False",
+"topic":"Python"
+},
+
+{
+"question":"Что такое float?",
+"answer":"Тип чисел с плавающей точкой",
+"topic":"Python"
+},
+
+{
+"question":"Что такое complex?",
+"answer":"Тип комплексных чисел",
+"topic":"Python"
+},
+
+{
+"question":"Что такое sequence?",
+"answer":"Упорядоченная последовательность объектов",
+"topic":"Python"
+},
+
+{
+"question":"Что такое str?",
+"answer":"Неизменяемая строка Unicode",
+"topic":"Python"
+},
+
+{
+"question":"Что такое tuple?",
+"answer":"Неизменяемая последовательность объектов",
+"topic":"Python"
+},
+
+{
+"question":"Что такое bytes?",
+"answer":"Неизменяемый массив байтов",
+"topic":"Python"
+},
+
+{
+"question":"Что такое list?",
+"answer":"Изменяемая последовательность объектов",
+"topic":"Python"
+},
+
+{
+"question":"Что такое bytearray?",
+"answer":"Изменяемый массив байтов",
+"topic":"Python"
+},
+
+{
+"question":"Что такое set?",
+"answer":"Множество уникальных объектов",
+"topic":"Python"
+},
+
+{
+"question":"Что такое frozenset?",
+"answer":"Неизменяемое множество",
+"topic":"Python"
+},
+
+{
+"question":"Что такое mapping?",
+"answer":"Структура ключ-значение",
+"topic":"Python"
+},
+
+{
+"question":"Что такое dict?",
+"answer":"Словарь ключ-значение",
+"topic":"Python"
+},
+
+{
+"question":"Что такое callable?",
+"answer":"Объект, который можно вызвать",
+"topic":"Python"
+},
+
+{
+"question":"Что такое функция?",
+"answer":"Вызываемый блок кода",
+"topic":"Python"
+},
+
+{
+"question":"Что такое метод экземпляра?",
+"answer":"Метод, связанный с объектом",
+"topic":"Python"
+},
+
+{
+"question":"Что делает len()?",
+"answer":"Возвращает длину объекта",
+"topic":"Python"
+},
+
+{
+"question":"Что делает id()?",
+"answer":"Возвращает идентификатор объекта",
+"topic":"Python"
+},
+
+{
+"question":"Что делает type()?",
+"answer":"Возвращает тип объекта",
+"topic":"Python"
+}
+]
